@@ -1,6 +1,6 @@
 ---
 - name: Configure Instance Pre Panda
-  hosts: winsource
+  hosts: windows
   # vars_files:
   #   - vars/panda.yml
   roles:

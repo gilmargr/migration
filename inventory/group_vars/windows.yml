@@ -1,6 +1,4 @@
 ---
-ansible_user: Administrator
-ansible_password: Teste_123
 ansible_connection: winrm
 ansible_winrm_server_cert_validation: ignore
 ansible_winrm_transport: ntlm

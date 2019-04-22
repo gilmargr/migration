@@ -1,6 +1,6 @@
 ---
 dbdata:
-  oracle_sid: FENIXPRD
+  oracle_sid: dbcs1
   oracle_home: /u01/app/oracle/product/12.2.0/dbhome_1
-  backup_name: FENIXPRD
+  backup_name: dbcs1
   oracle_edition: STANDARD_EDITION #STANDARD_EDITION, ENTERPRISE_EDITION, ENTERPRISE_EDITION_HIGH_PERFORMANCE, ENTERPRISE_EDITION_EXTREME_PERFORMANCE
