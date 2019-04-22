@@ -1,0 +1,9 @@
+---
+- name: Install panda dependencies
+  yum:
+    name: 
+      - iscsi-initiator-utils
+      - cronie
+      - util-linux  # lsblk
+      - dracut
+    state: latest

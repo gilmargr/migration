@@ -1,0 +1,55 @@
+---
+- name: Secret file for Panda
+  template:
+    src: secret.j2
+    dest: /home/opc/ansible/secret.yml
+    mode: 0600
+
+# - name: Debug hostvars
+#   debug:
+#     msg: "Var host {{hostvars}}"
+
+- name: Hosts file for Panda
+  template:
+    src: hosts.j2
+    dest: /home/opc/ansible/hosts.yml
+    mode: 0660
+
+- name: Copy pem file
+  copy:
+    src: "~/.oci/oci_api_key.pem"
+    dest: /home/opc/.oci/oci_api_key.pem
+    mode: 0600
+
+- name: Create ssh key
+  command: ssh-keygen -t rsa -N "" -b 2048  ~/.ssh/id_rsa
+  args: 
+      chdir: ~/.ssh
+      creates: ~/.ssh/id_rsa
+  delegate_to: 127.0.0.1
+
+- name: Copy ssh key
+  copy:
+    src: "~/.ssh/id_rsa"
+    dest: /home/opc/.ssh/private_key
+    mode: 0600
+
+- name: Create aliases
+  lineinfile: 
+    dest: /home/opc/.bashrc
+    line: '{{ item }}'
+  with_items:
+    - 'alias mig_srv_setup="opcmigrate migrate instance service setup"'
+    - 'alias mig_srv_start="opcmigrate migrate instance service start"'
+    - 'alias mig_srv_stop="opcmigrate migrate instance service stop"'
+    - 'alias mig_src_setup="opcmigrate migrate instance source setup"'
+    - 'alias mig_srv_status="opcmigrate migrate instance service status"'
+    - 'alias mig_ctlt_setup="opcmigrate migrate instance ctlt setup"'
+    - 'alias mig_job_run="opcmigrate migrate instance job run"'
+    - 'alias mig_job_list="opcmigrate migrate instance job list"'
+    - 'alias mig_job_status="opcmigrate migrate instance job status"'
+    - 'alias mig_job_resume="opcmigrate migrate instance job resume"'
+    - 'alias mig_discover="opcmigrate discover"'
+    - 'alias mig_plan="opcmigrate plan create --output migration-plan.json"'
+    - 'alias mig_instances="opcmigrate instances-export --plan migration-plan.json --format json > instances.json"'
+    - "alias mig_volumes=\"jq '.storage_volume | .[] | .name' migration-plan.json\""

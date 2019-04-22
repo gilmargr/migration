@@ -1,0 +1,23 @@
+---
+classic:
+  user: user@oracle.com
+  password: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          36656134386531653761653432626537656234636233643836626532323138613561663064333638
+          6338616132653466333730303335346632663166643262310a383461636262613232316238363337
+          31343737613830303336313733643663383265653230613166316235386332663231656464396466
+          3662313033383664310a366333303330396338353065373633306236663166623735363337346664
+          6336
+  os_endpoint: https://teste.br.storage.oraclecloud.com/v1/Storage-test
+  c_endpoint: compute.brcom-central-1.oraclecloud.com
+  container: /Compute-999999999
+
+oci:
+  tenancy: ocid1.tenancy.oc1..aaaaaaaa...
+  user: ocid1.user.oc1..aaaaaaaa...
+  fingerprint: fingerprint
+  region: us-ashburn-1
+  AD: XXXX:US-ASHBURN-AD-1
+  compartment: ocid1.compartment.oc1..aaaaaaaa...
+  subnet: ocid1.subnet.oc1.iad.aaaaaaaa...
+  sigpar: https://objectstorage.us-ashburn-1.oraclecloud.com/..../..../

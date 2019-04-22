@@ -1,0 +1,33 @@
+---
+- name: run as root
+  block:
+  - name: Make sure we have a 'wheel' group
+    group:
+        name: wheel
+        state: present
+  
+  - name: Add Unix Admins users
+    user: 
+      name: "{{ item }}"
+      group: users
+      groups: wheel
+    with_items:
+      - oracle
+  
+  - name: Allow wheel group to have passwordless sudo
+    lineinfile:
+      dest: /etc/sudoers
+      state: present
+      regexp: '^%wheel'
+      line: '%wheel ALL=(ALL) NOPASSWD: ALL'
+  
+  - name: Add sudoers users to wheel group
+    user:
+     name: deployer
+     groups: wheel
+     append: yes
+     state: present
+     createhome: yes
+
+  become: true
+  become_user: root

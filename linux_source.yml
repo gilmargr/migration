@@ -1,0 +1,9 @@
+---
+- name: Configure Instance Pre Panda
+  hosts: test
+  become: true
+  become_user: root
+  # vars_files:
+  #   - vars/panda.yml
+  roles:
+    - { role: "panda.source" }

@@ -1,0 +1,23 @@
+---
+classic:
+  user: rodrigo.tenorio@oracle.com
+  password: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          65376630653862313135333633623133326438303930656261616662343265343166303030356238
+          6333613732386433363066396461316237633139363337330a643135326535393961633061383561
+          61393230333233616665306362383562356566393034323531613430323134633764343734633837
+          3236653462366535360a343762326139646632636539343261363633616633383664663563393063
+          30663161313733303433356566656362333738396166653639353539663231326432613032356133
+          6230396466616631323939656433613566336464396635343139
+  c_endpoint: api-z12.compute.us6.oraclecloud.com
+  container: /Compute-a424360
+
+oci:
+  tenancy: ocid1.tenancy.oc1..aaaaaaaapco2quyeuifpocedljrkk2cc4vvl57uzftiwwcl4pqsocngv7b6q
+  user: ocid1.user.oc1..aaaaaaaakoipekx2zlanvamv5ylrswtuutdxjigtzigh5n5b6nrksxd4ctva
+  fingerprint: 6f:17:98:ef:2a:33:65:6e:cb:1f:b8:56:c5:77:42:6e
+  region: us-ashburn-1
+  AD: PCOZ:US-ASHBURN-AD-1
+  compartment: ocid1.compartment.oc1..aaaaaaaak7cco4mseo4rieugy7emh5yykqi2s6vyv46fojbw7zj5gpzv374q
+  subnet: ocid1.subnet.oc1.iad.aaaaaaaa7nji2j3cva7p3nsg6vsqc2zkq5gshdxk5e45qu74aaqbjau4weaq
+  sigpar: https://objectstorage.us-ashburn-1.oraclecloud.com/p/eczecyFAKOGiZDRE5PPJIa2BwFwTwOMF0M9BAf4x2kY/n/energiainstancias/b/ocic-oci-mig/o/

@@ -1,0 +1,8 @@
+---
+- name: Configure Instance Pre Panda
+  hosts: test
+  become: true
+  become_user: root
+
+  roles:
+    - { role: "panda.create" }
