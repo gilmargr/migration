@@ -1,7 +1,7 @@
 [dbrman]
 fenixprd ansible_host=129.152.42.68 ansible_user=opc ansible_ssh_private_key_file=/home/gilmar/.ssh/gilmarOpenssh.priv
 
-[sources]
+[linux]
 MyInstance_201803071930 ansible_host=129.152.42.65 ansible_user=opc ansible_ssh_private_key_file=/home/gilmar/.ssh/gilmarOpenssh.priv
 
 [panda]
