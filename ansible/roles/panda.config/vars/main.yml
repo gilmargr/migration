@@ -1,2 +1,3 @@
 ---
-source_servers: "{{ groups['linux'] }}"
+source_linux: "{{ groups['linux'] }}"
+source_windows: "{{ groups['windows'] }}"
