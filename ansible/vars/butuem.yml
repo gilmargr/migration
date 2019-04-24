@@ -1,0 +1,22 @@
+---
+classic:
+  user: gilmar.rodrigues@oracle.com
+  password: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          38356438353561353438373365623137333531656331393934613662396461376362313039383662
+          6266356232346633376536613532646638333330636461650a633864383663333738356239303330
+          66653431373664363333363635326266356261346465393433316332343632323766396666666566
+          3635323337326462360a333432383335653037626139653831373866363065613339386332643837
+          63313164616137363439666131646162633932313462343638313865336336323037
+  c_endpoint: compute.brcom-central-1.oraclecloud.com
+  container: /Compute-590405417
+
+oci:
+  tenancy: ocid1.tenancy.oc1..aaaaaaaazpw6axwe3bnhktqh6f3p3s4gyhmit3ftdlgnhlrve454xrxeg5qa
+  user: ocid1.user.oc1..aaaaaaaa674nl4amishb4jl2eb57mbkkxr7rfg6xyycnpf4afrj3imr6ve7q
+  fingerprint: 6f:17:98:ef:2a:33:65:6e:cb:1f:b8:56:c5:77:42:6e
+  region: us-ashburn-1
+  AD: LQPI:US-ASHBURN-AD-2
+  compartment: ocid1.compartment.oc1..aaaaaaaa7hzalnvdqpa7pmhfezlzioosv7udjhhyngtt4wnpacdykej462vq
+  subnet: ocid1.subnet.oc1.iad.aaaaaaaalvmiu5763epkslei2esrn56j3hidmekubpof76vigtyx7gp3oysq
+  sigpar: https://objectstorage.us-ashburn-1.oraclecloud.com/p/aUY4mePKwUgIizTlQEYZyA_hMinKz062MYJb0uKVUmc/n/oraclemarciobut/b/ocic-oci-mig/o/

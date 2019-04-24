@@ -1,0 +1,13 @@
+[dbrman]
+dbcs1 ansible_host=xxx.xxx.xxx.xxx ansible_user=opc ansible_ssh_private_key_file=~/.ssh/id_rsa
+
+[linux]
+linux1 ansible_host=xxx.xxx.xxx.xxx ansible_user=opc ansible_ssh_private_key_file=~/.ssh/id_rsa
+linux2 ansible_host=xxx.xxx.xxx.xxx ansible_user=opc ansible_ssh_private_key_file=~/.ssh/id_rsa
+linux3 ansible_host=xxx.xxx.xxx.xxx ansible_user=opc ansible_ssh_private_key_file=~/.ssh/id_rsa
+
+[panda]
+xxx.xxx.xxx.xxx ansible_user=opc ansible_ssh_private_key_file=~/.ssh/id_rsa
+
+[windows]
+windows1 ansible_host=xxx.xxx.xxx.xxx ansible_user=Administrator ansible_password=Teste_123

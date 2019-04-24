@@ -1,7 +1,0 @@
----
-- name: Configure DBaaS for RMAN
-  hosts: dbrman
-  become: true
-  become_user: oracle
-  roles:
-    - { role: "db.rman" }

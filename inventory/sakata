@@ -1,6 +1,0 @@
-[linux]
-BIEEPRD01 ansible_host=129.150.67.129 ansible_user=opc ansible_ssh_private_key_file=~/.ssh/id_rsa
-DBPRD01 ansible_host=129.150.64.13 ansible_user=opc ansible_ssh_private_key_file=~/.ssh/id_rsa
-
-[panda]
-129.150.71.118 ansible_user=opc ansible_ssh_private_key_file=~/.ssh/id_rsa

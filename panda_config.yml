@@ -1,7 +1,0 @@
----
-- name: Configure Instance Panda
-  hosts: panda
-  # vars_files:
-  #   - vars/panda.yml
-  roles:
-    - { role: "panda.config" }

@@ -1,5 +1,0 @@
----
-dbmig:
-  migrate_dir: /home/oracle/migrate
-  oci_key_file: /home/oracle/migrate/oci_api_key.pem
-  temp_dir: /home/oracle/migrate/onprem_upload

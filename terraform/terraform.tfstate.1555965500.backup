@@ -1,0 +1,151 @@
+{
+    "version": 3,
+    "terraform_version": "0.11.13",
+    "serial": 10,
+    "lineage": "7096b4df-9dba-a505-6617-ffb71585ef26",
+    "modules": [
+        {
+            "path": [
+                "root"
+            ],
+            "outputs": {
+                "instance_id": {
+                    "sensitive": false,
+                    "type": "string",
+                    "value": "ffb72184-f199-425c-9bb9-cddb136fd749"
+                },
+                "private_ip_address": {
+                    "sensitive": false,
+                    "type": "string",
+                    "value": "10.106.174.194"
+                },
+                "public_ip_address": {
+                    "sensitive": false,
+                    "type": "string",
+                    "value": "144.22.74.222"
+                }
+            },
+            "resources": {
+                "opc_compute_instance.instance": {
+                    "type": "opc_compute_instance",
+                    "depends_on": [
+                        "opc_compute_ip_reservation.panda-ip-reservation",
+                        "opc_compute_ssh_key.primary",
+                        "opc_compute_storage_volume.boot-volume"
+                    ],
+                    "primary": {
+                        "id": "ffb72184-f199-425c-9bb9-cddb136fd749",
+                        "attributes": {
+                            "attributes": "{\"dns\":{\"domain\":\"compute-590405417.oraclecloud.internal.\",\"hostname\":\"panda3.compute-590405417.oraclecloud.internal.\",\"nimbula_vcable-eth0\":\"panda3.compute-590405417.oraclecloud.internal.\"},\"network\":{\"nimbula_vcable-eth0\":{\"address\":[\"c6:b0:fc:85:d0:93\",\"10.106.174.194\"],\"dhcp_options\":[],\"id\":\"/Compute-590405417/gilmar.rodrigues@oracle.com/4b3e9630-9576-4816-aff3-658e907029c1\",\"model\":\"e1000\",\"vethernet\":\"/oracle/public/default\",\"vethernet_id\":\"0\",\"vethernet_type\":\"vlan\"}},\"sshkeys\":[\"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAkewoZ03y/j1stqQ+MSXWvTDc6ZlIQtpKbzrO4Omy6v+08ejurQROtHtgpKxz3B7KmqA1o0FIBkuIzHSnI6DFhUKMbpjKcjJOz9FuEwY6NYsrK1HoJ5OYGZaw/957UxAxLlsgSuhy9jKkaiwpKA99cE0QaQ4hYJxYVC2Nh8+IzuOzRhkqtPqQaWQBCJZ2C8VHl50Cd1fvmDBZhsYNH+tolaRZg3oTpA3+P3gWowDKgyDGOBSNN9crLnf+ie0ejxRxbC4/HTUkKgi1kk7fXxa/iMqKU3R+NSQsgtmInF2wK9Lons0wSdflaq8x+hpQCKnhVxp/qQ1XY6xmD5RGAJIijQ==\",\"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCm4q7ljmZmSK2Pwn8aDSNCQNR/oM5uQn2xA4ubFh72+zWKf/nHChWz0ACWGSbCzdtKTNFb/VnygtUwpmMGdo35j6VEBFqvYTNCM2GFgKCUOZNtQrMaWCmg/yqiAvTZoHBKaI/9Z04vCGq7ndMqwny6z8sIvESwRmpc1hRKeKTC5gGk7W6LUQmrq+OXFEb2Z67cYhX2w/e49bh1zCQSQuUSVPo7vgtXYf61ES8m2lWXiZdDrduipgzYKlctgdrjzwMhdkf96VDG7/mW+vD6XAneBHL1MFyrHO7hEG065CpwqK3AYYED0l0Mr/UNConQWb9pQzC+k+ddWOYPTPYvggpZ\\n\"]}",
+                            "availability_domain": "/brcom-central-1a",
+                            "boot_order.#": "1",
+                            "boot_order.0": "1",
+                            "desired_state": "running",
+                            "domain": "compute-590405417.oraclecloud.internal.",
+                            "entry": "0",
+                            "fingerprint": "",
+                            "fqdn": "panda3.compute-590405417.oraclecloud.internal.",
+                            "hostname": "panda3",
+                            "id": "ffb72184-f199-425c-9bb9-cddb136fd749",
+                            "image_format": "raw",
+                            "image_list": "",
+                            "ip_address": "10.106.174.194",
+                            "label": "panda3",
+                            "name": "panda3",
+                            "networking_info.#": "1",
+                            "networking_info.1399214203.dns.#": "1",
+                            "networking_info.1399214203.dns.0": "panda3.compute-590405417.oraclecloud.internal.",
+                            "networking_info.1399214203.index": "0",
+                            "networking_info.1399214203.ip_address": "",
+                            "networking_info.1399214203.ip_network": "",
+                            "networking_info.1399214203.is_default_gateway": "false",
+                            "networking_info.1399214203.mac_address": "",
+                            "networking_info.1399214203.name_servers.#": "0",
+                            "networking_info.1399214203.nat.#": "1",
+                            "networking_info.1399214203.nat.0": "e262a753-601d-4f3c-af99-f4a724d54896",
+                            "networking_info.1399214203.search_domains.#": "0",
+                            "networking_info.1399214203.sec_lists.#": "1",
+                            "networking_info.1399214203.sec_lists.0": "default",
+                            "networking_info.1399214203.shared_network": "true",
+                            "networking_info.1399214203.vnic": "",
+                            "networking_info.1399214203.vnic_sets.#": "0",
+                            "placement_requirements.#": "3",
+                            "placement_requirements.0": "/system/compute/allow_instances",
+                            "placement_requirements.1": "/system/compute/placement/default",
+                            "placement_requirements.2": "/system/compute/pool/general",
+                            "platform": "linux",
+                            "priority": "/oracle/public/default",
+                            "quota_reservation": "",
+                            "relationships.#": "0",
+                            "resolvers.#": "0",
+                            "reverse_dns": "true",
+                            "shape": "oc3",
+                            "site": "",
+                            "ssh_keys.#": "2",
+                            "ssh_keys.0": "oracle",
+                            "ssh_keys.1": "terraform-key",
+                            "start_time": "2019-04-22T20:33:47Z",
+                            "state": "running",
+                            "storage.#": "1",
+                            "storage.844227380.index": "1",
+                            "storage.844227380.name": "/Compute-590405417/gilmar.rodrigues@oracle.com/panda3/ffb72184-f199-425c-9bb9-cddb136fd749/6818188d-cde4-4a33-9fee-d14b96f43068",
+                            "storage.844227380.volume": "panda3-boot",
+                            "tags.#": "0",
+                            "vcable": "4b3e9630-9576-4816-aff3-658e907029c1",
+                            "virtio": "false",
+                            "vnc_address": "10.106.174.193:5900"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 1200000000000,
+                                "delete": 1200000000000,
+                                "update": 1200000000000
+                            }
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.opc"
+                },
+                "opc_compute_ip_reservation.panda-ip-reservation": {
+                    "type": "opc_compute_ip_reservation",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "e262a753-601d-4f3c-af99-f4a724d54896",
+                        "attributes": {
+                            "id": "e262a753-601d-4f3c-af99-f4a724d54896",
+                            "ip": "144.22.74.222",
+                            "name": "e262a753-601d-4f3c-af99-f4a724d54896",
+                            "parent_pool": "/oracle/public/ippool",
+                            "permanent": "true",
+                            "tags.#": "0",
+                            "used": "true"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.opc"
+                },
+                "opc_compute_ssh_key.primary": {
+                    "type": "opc_compute_ssh_key",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "terraform-key",
+                        "attributes": {
+                            "enabled": "true",
+                            "id": "terraform-key",
+                            "key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCm4q7ljmZmSK2Pwn8aDSNCQNR/oM5uQn2xA4ubFh72+zWKf/nHChWz0ACWGSbCzdtKTNFb/VnygtUwpmMGdo35j6VEBFqvYTNCM2GFgKCUOZNtQrMaWCmg/yqiAvTZoHBKaI/9Z04vCGq7ndMqwny6z8sIvESwRmpc1hRKeKTC5gGk7W6LUQmrq+OXFEb2Z67cYhX2w/e49bh1zCQSQuUSVPo7vgtXYf61ES8m2lWXiZdDrduipgzYKlctgdrjzwMhdkf96VDG7/mW+vD6XAneBHL1MFyrHO7hEG065CpwqK3AYYED0l0Mr/UNConQWb9pQzC+k+ddWOYPTPYvggpZ\n",
+                            "name": "terraform-key"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.opc"
+                }
+            },
+            "depends_on": []
+        }
+    ]
+}

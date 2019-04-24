@@ -1,9 +1,0 @@
-export LANG=en_US.utf8
-export LC_ALL=en_US.utf8
-export AD={{oci.AD}}
-export C={{oci.compartment}}
-export ORACLE_SID={{dbdata.oracle_sid}}
-export ORACLE_HOME={{dbdata.oracle_home}}
-export PATH=$PATH:$ORACLE_HOME/bin
-rm -rf {{dbmig.temp_dir}}
-/home/oracle/migrate/bin/oci-cli-scripts/create_backup_from_onprem --config-file {{dbmig.migrate_dir}}/config.txt --display-name {{dbdata.backup_name}} --availability-domain $AD --edition {{dbdata.oracle_edition}} --opc-installer-dir {{dbmig.migrate_dir}}/opc_installer --tmp-dir {{dbmig.temp_dir}} --compartment-id $C

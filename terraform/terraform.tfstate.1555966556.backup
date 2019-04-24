@@ -1,0 +1,70 @@
+{
+    "version": 3,
+    "terraform_version": "0.11.13",
+    "serial": 11,
+    "lineage": "7096b4df-9dba-a505-6617-ffb71585ef26",
+    "modules": [
+        {
+            "path": [
+                "root"
+            ],
+            "outputs": {
+                "instance_id": {
+                    "sensitive": false,
+                    "type": "string",
+                    "value": "ffb72184-f199-425c-9bb9-cddb136fd749"
+                },
+                "private_ip_address": {
+                    "sensitive": false,
+                    "type": "string",
+                    "value": "10.106.174.194"
+                },
+                "public_ip_address": {
+                    "sensitive": false,
+                    "type": "string",
+                    "value": "144.22.74.222"
+                }
+            },
+            "resources": {
+                "opc_compute_ip_reservation.panda-ip-reservation": {
+                    "type": "opc_compute_ip_reservation",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "e262a753-601d-4f3c-af99-f4a724d54896",
+                        "attributes": {
+                            "id": "e262a753-601d-4f3c-af99-f4a724d54896",
+                            "ip": "144.22.74.222",
+                            "name": "e262a753-601d-4f3c-af99-f4a724d54896",
+                            "parent_pool": "/oracle/public/ippool",
+                            "permanent": "true",
+                            "tags.#": "0",
+                            "used": "true"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.opc"
+                },
+                "opc_compute_ssh_key.primary": {
+                    "type": "opc_compute_ssh_key",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "terraform-key",
+                        "attributes": {
+                            "enabled": "true",
+                            "id": "terraform-key",
+                            "key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCm4q7ljmZmSK2Pwn8aDSNCQNR/oM5uQn2xA4ubFh72+zWKf/nHChWz0ACWGSbCzdtKTNFb/VnygtUwpmMGdo35j6VEBFqvYTNCM2GFgKCUOZNtQrMaWCmg/yqiAvTZoHBKaI/9Z04vCGq7ndMqwny6z8sIvESwRmpc1hRKeKTC5gGk7W6LUQmrq+OXFEb2Z67cYhX2w/e49bh1zCQSQuUSVPo7vgtXYf61ES8m2lWXiZdDrduipgzYKlctgdrjzwMhdkf96VDG7/mW+vD6XAneBHL1MFyrHO7hEG065CpwqK3AYYED0l0Mr/UNConQWb9pQzC+k+ddWOYPTPYvggpZ\n",
+                            "name": "terraform-key"
+                        },
+                        "meta": {},
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.opc"
+                }
+            },
+            "depends_on": []
+        }
+    ]
+}

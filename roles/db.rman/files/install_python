@@ -1,1 +1,0 @@
-mkdir $HOME/lib;cd $HOME/migrate/Python-3.6.5;./configure --prefix=$HOME/lib;make && make install;ln -s $HOME/lib/bin/python3 $HOME/lib/bin/python;ln -s $HOME/lib/bin/pip3 $HOME/lib/bin/pip

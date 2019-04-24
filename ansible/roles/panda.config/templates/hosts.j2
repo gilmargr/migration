@@ -1,0 +1,8 @@
+source:
+  hosts:
+{% for host in source_servers %}
+    {{hostvars[host].ansible_host }}:
+      label: {{hostvars[host].inventory_hostname}}
+      remote_user: opc
+      ansible_ssh_private_key_file: ~/.ssh/private_key
+{% endfor %}

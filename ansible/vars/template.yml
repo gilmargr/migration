@@ -1,0 +1,16 @@
+---
+classic:
+  user: user@oracle.com
+  password: P4ssw0rd
+  c_endpoint: compute.brcom-central-1.oraclecloud.com
+  container: /Compute-999999999
+
+oci:
+  tenancy: ocid1.tenancy.oc1..aaaaaaaa...
+  user: ocid1.user.oc1..aaaaaaaa...
+  fingerprint: fingerprint
+  region: us-ashburn-1
+  AD: XXXX:US-ASHBURN-AD-1
+  compartment: ocid1.compartment.oc1..aaaaaaaa...
+  subnet: ocid1.subnet.oc1.iad.aaaaaaaa...
+  sigpar: https://objectstorage.us-ashburn-1.oraclecloud.com/..../..../
