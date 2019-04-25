@@ -1,4 +1,3 @@
-// Copyright © 2017 Oracle and/or its affiliates.  All rights reserved.
 // Licensed under the Universal Permissive License v 1.0
 
 resource "opc_compute_ssh_key" "primary" {
