@@ -35,21 +35,22 @@
     mode: 0600
 
 - name: Create aliases
-  lineinfile: 
-    dest: /home/opc/.bashrc
-    line: '{{ item }}'
-  with_items:
-    - 'alias mig_srv_setup="opcmigrate migrate instance service setup"'
-    - 'alias mig_srv_start="opcmigrate migrate instance service start"'
-    - 'alias mig_srv_stop="opcmigrate migrate instance service stop"'
-    - 'alias mig_src_setup="opcmigrate migrate instance source setup"'
-    - 'alias mig_srv_status="opcmigrate migrate instance service status"'
-    - 'alias mig_ctlt_setup="opcmigrate migrate instance ctlt setup"'
-    - 'alias mig_job_run="opcmigrate migrate instance job run"'
-    - 'alias mig_job_list="opcmigrate migrate instance job list"'
-    - 'alias mig_job_status="opcmigrate migrate instance job status"'
-    - 'alias mig_job_resume="opcmigrate migrate instance job resume"'
-    - 'alias mig_discover="opcmigrate discover"'
-    - 'alias mig_plan="opcmigrate plan create --output migration-plan.json"'
-    - 'alias mig_instances="opcmigrate instances-export --plan migration-plan.json --format json > instances.json"'
-    - "alias mig_volumes=\"jq '.storage_volume | .[] | .name' migration-plan.json\""
+  blockinfile:
+    path: /home/opc/.bashrc
+    marker: "# {mark} ANSIBLE MANAGED BLOCK"
+    content: |
+      alias mig_srv_setup="opcmigrate migrate instance service setup"
+      alias mig_srv_start="opcmigrate migrate instance service start"
+      alias mig_srv_stop="opcmigrate migrate instance service stop"
+      alias mig_src_setup="opcmigrate migrate instance source setup"
+      alias mig_srv_status="opcmigrate migrate instance service status"
+      alias mig_ctlt_setup="opcmigrate migrate instance ctlt setup"
+      alias mig_job_run="opcmigrate migrate instance job run"
+      alias mig_job_list="opcmigrate migrate instance job list"
+      alias mig_job_status="opcmigrate migrate instance job status"
+      alias mig_job_resume="opcmigrate migrate instance job resume"
+      alias mig_job_delete="opcmigrate migrate instance job delete"
+      alias mig_discover="opcmigrate discover"
+      alias mig_plan="opcmigrate plan create --output migration-plan.json"
+      alias mig_instances="opcmigrate instances-export --plan migration-plan.json --format json > instances.json"
+      alias mig_volumes="jq '.storage_volume | .[] | .name' migration-plan.json"
