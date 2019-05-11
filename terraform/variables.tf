@@ -10,7 +10,7 @@ variable password {
 }
 
 variable domain {
-  default = "590405417"
+  description = "Domain ID"
 }
 
 variable ssh_public_key {
