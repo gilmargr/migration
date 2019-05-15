@@ -54,3 +54,4 @@
       alias mig-plan="opcmigrate plan create --output migration-plan.json"
       alias mig-instances="opcmigrate instances-export --plan migration-plan.json --format json > instances.json"
       alias mig-volumes="jq '.storage_volume | .[] | .name' migration-plan.json"
+      alias mig-job-details="~/mig status | tail -n +2 | jq '.[length-1].instances[] | .start_time, .update_time, .src_instance_name, .volumes[].status_details'"

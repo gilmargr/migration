@@ -12,3 +12,26 @@
 - name: Debug license
   debug:
     msg: "{{lic.stdout_lines}}"
+
+- name: Download Virtio Drivers
+  win_get_url:
+    url: https://objectstorage.us-ashburn-1.oraclecloud.com/p/BXbd-wfT2SLakvmlzzciq7T6iitjTpKP8NezicJb62Q/n/oraclemarciobut/b/files/o/V981734-01.zip
+    dest: C:\V981734-01.zip
+
+- name: Unzip Virtio Drivers
+  win_unzip:
+    src: C:\V981734-01.zip
+    dest: C:\V981734-01
+    creates: C:\V981734-01
+
+- name: Copy silent installer
+  win_copy:
+    src: setup.iss
+    dest: C:\V981734-01\
+
+- name: Install Virtio Drivers
+  win_package:
+    path: C:\V981734-01\Setup.exe
+    arguments: -s -f1c:\V981734-01\setup.iss -f2c:\V981734-01\setup.log
+    creates_path: C:\Program Files (x86)\Oracle Corporation\Oracle Windows VirtIO Drivers
+    state: present
