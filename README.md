@@ -3,6 +3,11 @@ Atention
 
 These scripts were created to facilitate in some way the processes described in [Upgrade to Oracle Cloud Infrastructure](https://docs.oracle.com/en/cloud/migrate-oci.html)
 
+The requiremts:
+- Linux shell (WSL in windows)
+- Terraform
+- Ansible 
+
 Before migration day requirements
 ---------------------------------
 
