@@ -13,4 +13,5 @@ Before migration day requirements
 
 - Access to customer instances is needed to validade availability of OCI drivers and kernel modules (Linux instances)
 - Obtain customers's SSH keys, ask them to add you own or add through orchestration
-- [Create Migration Instance](https://github.com/gilmargr/migration/blob/master/terraform/README.md) (for IaaS  migration)
+- [Create Migration Instance](terraform/README.md) (for IaaS  migration)
+- [Config Migration Instance](ansible/roles/panda.config/README.md)
