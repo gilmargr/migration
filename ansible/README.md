@@ -1,9 +1,9 @@
 Encryption
 ==========
 
-Use ansible vault to encrypt password in var/yml files if you need to share the
-configuration files.
-Ansible config provided look for a file in (~/.ansible/vault_pass) with a one line password to encrypt the
+If you intent to share your files, you should encrypt sensitive data.
+For that, use ansible vault
+The ansible config provided, look for a file in (~/.ansible/vault_pass) with a one line password to encrypt the
 string.
 
-ansible-vault encrypt_string 'password' --name 'password'
+Ex: ansible-vault encrypt_string 'password' --name 'password'
