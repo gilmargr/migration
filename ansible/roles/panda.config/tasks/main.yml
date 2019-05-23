@@ -21,13 +21,6 @@
     dest: /home/opc/.oci/oci_api_key.pem
     mode: 0600
 
-- name: Create ssh key
-  command: ssh-keygen -t rsa -N "" -b 2048  ~/.ssh/id_rsa
-  args: 
-      chdir: ~/.ssh
-      creates: ~/.ssh/id_rsa
-  delegate_to: 127.0.0.1
-
 - name: Copy ssh key
   copy:
     src: "~/.ssh/id_rsa"
