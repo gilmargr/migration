@@ -18,4 +18,4 @@ This role just needs "oci" variable
 Example
 -------
 
-ansible-playbook -i inventory/hosts -e '@vars/my-vars.yml' dbrman.config.yml
+> ansible-playbook -i inventory/hosts -e '@vars/my-vars.yml' dbrman.config.yml

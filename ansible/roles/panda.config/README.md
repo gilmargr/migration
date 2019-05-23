@@ -6,14 +6,14 @@ Configure panda instance with yml files and aliases to make the migration easier
 Requirements
 ------------
 
-Create instance inventory in groups [linux] and [windows] in file inventory/hosts
+- Fill in instances configurations in inventory groups [linux] and [windows] in "inventory/hosts" file
 
 Variables
 ---------
 
-Create yml file with classic and oci variables in "vars" directory
+Create a yml file containing classic and oci variables under "vars" directory
 
 Playbook
 --------
 
-ansible-playbook -i inventory/hosts -e '@vars/my-vars.yml' panda_config.yml
+> ansible-playbook -i inventory/hosts -e '@vars/my-vars.yml' panda_config.yml

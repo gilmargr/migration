@@ -12,4 +12,4 @@ Requirements
 Example Playbook
 ----------------
 
-ansible-playbook pre_panda.yml
+> ansible-playbook pre_panda.yml

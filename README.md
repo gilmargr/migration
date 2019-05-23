@@ -1,5 +1,5 @@
-Attention
-========
+OCI-C to OCI
+============
 
 These scripts were created to facilitate in some way the processes described in [Upgrade to Oracle Cloud Infrastructure](https://docs.oracle.com/en/cloud/migrate-oci.html).
 They are not meant to substitute the processes described in link above nor are supported by Oracle.
