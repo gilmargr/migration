@@ -6,14 +6,20 @@ This role perform a database backup using rman from a DBCS instance (Oracle Linu
 Requirements
 ------------
 
-Create instance inventory in group [dbrman] in file inventory/hosts
+- Obtain password for DBCS (sys user). It will be used to restore the database in OCI
 
 Variables
 ---------
 
-Create yml file with credentials in vars directory
+- Create yml file containing classic and oci variables under "vars" directory
+- This role uses the "oci" variable content
 
-This role just needs "oci" variable
+Inventory
+---------
+
+- Fill in instances configurations in inventory group [dbrman] in "inventory/hosts" file
+- Create a yml file under inventory/host_vars. Use dbcs1.yml as template
+  - Each file must have the same name as the one defined in "hosts" file above (Ex dbcs1.yml).
 
 Example
 -------
