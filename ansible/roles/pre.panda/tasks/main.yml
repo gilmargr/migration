@@ -10,7 +10,7 @@
     state: "directory"
 
 - name: Create ssh key
-  command: ssh-keygen -t rsa -N "" -b 2048  id_rsa
+  command: ssh-keygen -t rsa -N "" -b 2048 -f id_rsa
   args:
     chdir: ~/.ssh
     creates: ~/.ssh/id_rsa
