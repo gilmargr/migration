@@ -58,12 +58,12 @@
 - name: Install OCI CLI on oracle
   become: true
   become_user: root
-  raw: cd;export HOME={{dbmig.migrate_dir}};bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh) --accept-all-defaults --optional-features db"
+  raw: cd;export HOME={{dbmig.migrate_dir}};bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh) --accept-all-defaults --optional-features 'db'"
 
 - name: Change oracle dir owner
   become: true
   become_user: root
-  file: 
+  file:
     dest: "/home/oracle"
     owner: oracle
     group: oinstall
